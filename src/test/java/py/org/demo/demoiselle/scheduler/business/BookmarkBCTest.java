@@ -1,4 +1,4 @@
-package py.setics.demoiselle.scheduler.business;
+package py.org.demo.demoiselle.scheduler.business;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;

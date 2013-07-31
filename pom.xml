@@ -14,6 +14,10 @@
 	<description></description>
 	<url></url>
 
+	<properties>
+		<javaee.api.version>6.0</javaee.api.version>
+	</properties>
+
 	<parent>
 		<groupId>br.gov.frameworkdemoiselle</groupId>
 		<artifactId>demoiselle-jsf-parent</artifactId>
@@ -51,5 +55,40 @@
 			<artifactId>demoiselle-scheduler</artifactId>
 			<version>1.0.4-SNAPSHOT</version>
 		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>javax</groupId> -->
+<!-- 			<artifactId>javaee-api</artifactId> -->
+<!-- 			<version>${javaee.api.version}</version> -->
+<!-- 			<scope>provided</scope> -->
+<!-- 		</dependency> -->
+		<dependency>
+			<groupId>org.apache.openejb</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>6.0-4</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.10</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- The <scope>test</scope> guarantees that non of your runtime code is 
+			dependent on any OpenEJB classes. -->
+		<dependency>
+			<groupId>org.apache.openejb</groupId>
+			<artifactId>openejb-core</artifactId>
+			<version>4.6.0-SNAPSHOT</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>apache-m2-snapshot</id>
+			<name>Apache Snapshot Repository</name>
+			<url>http://repository.apache.org/snapshots</url>
+		</repository>
+	</repositories>
+
 </project>

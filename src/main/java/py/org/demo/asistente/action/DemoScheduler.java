@@ -14,7 +14,7 @@ import br.gov.frameworkdemoiselle.lifecycle.Startup;
 import br.gov.frameworkdemoiselle.stereotype.BusinessController;
 
 @Scheduler(expression = "16:27:00 EVERY_MINUTE")
-@Name("demoScheduler")
+@Name(value="demoScheduler")
 @BusinessController
 public class DemoScheduler implements ISchedulerAction, Serializable {
 
